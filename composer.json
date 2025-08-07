@@ -1,0 +1,20 @@
+{
+    "name": "kevin/touchepasauklaxon",
+    "autoload": {
+        "psr-4": {
+            "Kevin\\Touchepasauklaxon\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Faby",
+            "email": "kevin@faby.fr"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.3"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

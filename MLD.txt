@@ -1,0 +1,52 @@
+Modèle Logique de Données (MLD)
+
+Ce document décrit la structure logique des tables de la base de données tpak_covoiturage.
+Description des Tables
+
+AGENCES (<u>id</u>, ville)
+
+    id : INT, AUTO_INCREMENT, PRIMARY KEY - Identifiant unique de l'agence.
+
+    ville : VARCHAR(255) - Nom de la ville de l'agence.
+
+UTILISATEURS (<u>id</u>, nom, prenom, email, telephone, mot_de_passe, role)
+
+    id : INT, AUTO_INCREMENT, PRIMARY KEY - Identifiant unique de l'utilisateur.
+
+    nom : VARCHAR(255) - Nom de famille de l'utilisateur.
+
+    prenom : VARCHAR(255) - Prénom de l'utilisateur.
+
+    email : VARCHAR(255), UNIQUE - Adresse email de l'utilisateur, sert d'identifiant de connexion.
+
+    telephone : VARCHAR(20) - Numéro de téléphone de l'utilisateur.
+
+    mot_de_passe : VARCHAR(255) - Mot de passe haché de l'utilisateur.
+
+    role : ENUM('utilisateur', 'admin') - Rôle de l'utilisateur dans l'application.
+
+TRAJETS (<u>id</u>, date_heure_depart, date_heure_arrivee, places_total, places_disponibles, #id_utilisateur_auteur, #id_agence_depart, #id_agence_arrivee)
+
+    id : INT, AUTO_INCREMENT, PRIMARY KEY - Identifiant unique du trajet.
+
+    date_heure_depart : DATETIME - Date et heure de départ du trajet.
+
+    date_heure_arrivee : DATETIME - Date et heure d'arrivée estimée.
+
+    places_total : INT - Nombre total de places offertes dans le véhicule (hors conducteur).
+
+    places_disponibles : INT - Nombre de places encore disponibles.
+
+    id_utilisateur_auteur : INT, FOREIGN KEY - Référence à l'utilisateur qui a créé le trajet.
+
+    id_agence_depart : INT, FOREIGN KEY - Référence à l'agence de départ.
+
+    id_agence_arrivee : INT, FOREIGN KEY - Référence à l'agence d'arrivée.
+
+Relations (Clés Étrangères)
+
+    TRAJETS.id_utilisateur_auteur référence UTILISATEURS(id)
+
+    TRAJETS.id_agence_depart référence AGENCES(id)
+
+    TRAJETS.id_agence_arrivee référence AGENCES(id)

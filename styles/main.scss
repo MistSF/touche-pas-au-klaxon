@@ -1,0 +1,16 @@
+// 1. Définir vos couleurs personnalisées
+$primary:   #004369;
+$secondary: #DB1F48;
+$success:   #01949A;
+$info:      #00A8C6;
+$warning:   #E5DDC8;
+$light:     #F0F0F0; // Ajout pour le fond
+$dark:      #212529; // Standard
+
+// 2. Importer Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Votre CSS personnalisé ici
+body {
+    background-color: $light;
+}
