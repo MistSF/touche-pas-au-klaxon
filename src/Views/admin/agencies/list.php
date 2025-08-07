@@ -1,4 +1,4 @@
-<?php // src/Views/admin/agencies/list.php ?>
+<?php ?>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">

@@ -1,16 +1,37 @@
-// 1. Définir vos couleurs personnalisées
-$primary:   #004369;
-$secondary: #DB1F48;
-$success:   #01949A;
-$info:      #00A8C6;
-$warning:   #E5DDC8;
-$light:     #F0F0F0; // Ajout pour le fond
-$dark:      #212529; // Standard
+// styles/main.scss
 
-// 2. Importer Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+// 1. Définir votre nouvelle palette de couleurs
+$tpak-blue:       #0074c7; // Bleu principal
+$tpak-dark-blue:  #00497c; // Bleu foncé (pour le header par ex.)
+$tpak-dark-grey:  #384050; // Texte
+$tpak-red:        #cd2c2e; // Danger, suppression
+$tpak-green:      #82b864; // Succès, création
+$tpak-light-bg:   #f1f8fc; // Fond de page
 
-// 3. Votre CSS personnalisé ici
-body {
-    background-color: $light;
+// 2. Surcharger les variables de thème de Bootstrap AVANT de l'importer
+// On associe nos couleurs aux variables sémantiques de Bootstrap
+$primary:       $tpak-blue;
+$secondary:     $tpak-dark-grey;
+$success:       $tpak-green;
+$danger:        $tpak-red;
+$dark:          $tpak-dark-blue;
+$light:         $tpak-light-bg;
+
+// On peut aussi personnaliser la couleur du texte
+$body-bg:       $tpak-light-bg;
+$body-color:    $tpak-dark-grey;
+
+// 3. Importer Bootstrap (après avoir défini vos variables)
+// Le chemin peut varier selon votre installation, mais si vous utilisez npm, il sera dans node_modules
+// Pour ce projet, nous allons utiliser une importation via URL pour simplifier.
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+
+// 4. Ajouter vos styles personnalisés ici (si besoin)
+// Par exemple, pour que les liens aient la couleur primaire
+a {
+  color: $primary;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .nav-link {
+    color: #fff;
 }

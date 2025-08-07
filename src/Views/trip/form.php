@@ -1,10 +1,9 @@
-<?php // src/Views/trip/form.php ?>
+<?php ?>
 
 <h1><?= htmlspecialchars($title) ?></h1>
 
 <div class="card">
     <div class="card-body">
-        <!-- L'action du formulaire est dynamique : soit 'storeTrip' (création) soit 'updateTrip' (modification) -->
         <form action="index.php?action=<?= isset($trip) ? 'updateTrip&id=' . $trip['id'] : 'storeTrip' ?>" method="POST">
             
             <fieldset class="mb-3">

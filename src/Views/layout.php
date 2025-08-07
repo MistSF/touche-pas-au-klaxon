@@ -1,4 +1,4 @@
-<?php // src/Views/layout.php ?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

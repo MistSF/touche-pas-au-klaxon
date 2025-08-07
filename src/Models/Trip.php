@@ -1,5 +1,4 @@
 <?php
-// src/Models/Trip.php
 namespace Models;
 
 use PDO;

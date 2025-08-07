@@ -1,5 +1,4 @@
 <?php
-// src/Models/Agency.php
 namespace Models;
 
 use PDO;

@@ -1,4 +1,4 @@
-<?php // src/Views/admin/trips/list.php ?>
+<?php ?>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -44,7 +44,6 @@
                     <span class="badge <?= $badgeClass ?>"><?= $trip['places_disponibles'] ?></span>
                 </td>
                 <td class="text-end">
-                    <!-- L'administrateur peut supprimer n'importe quel trajet -->
                     <a href="index.php?action=adminDeleteTrip&id=<?= $trip['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce trajet ? Cette action est irréversible.');">Supprimer</a>
                 </td>
             </tr>

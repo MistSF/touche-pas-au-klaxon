@@ -1,10 +1,9 @@
-<?php
-// src/Utils/Database.php
+<?php 
 namespace Utils;
 
 use PDO;
 use PDOException;
-use Dotenv\Dotenv; // Import de la classe Dotenv
+use Dotenv\Dotenv;
 
 class Database {
     private static $instance = null;
@@ -15,10 +14,9 @@ class Database {
     public static function getInstance(): PDO {
         if (self::$instance === null) {
             // Chargement des variables d'environnement
-            $dotenv = Dotenv::createImmutable(__DIR__ . '/../../'); // Le chemin vers la racine du projet
+            $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
             $dotenv->load();
 
-            // Utilisation des variables d'environnement
             $host = $_ENV['DB_HOST'];
             $db   = $_ENV['DB_NAME'];
             $user = $_ENV['DB_USER'];

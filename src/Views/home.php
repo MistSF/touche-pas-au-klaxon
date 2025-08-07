@@ -1,4 +1,4 @@
-<?php // src/Views/home.php ?>
+<?php ?>
 
 <h1><?= htmlspecialchars($title) ?></h1>
 <p class="lead">Voici la liste des trajets prévus. Connectez-vous pour obtenir plus de détails ou pour proposer un nouveau trajet.</p>
