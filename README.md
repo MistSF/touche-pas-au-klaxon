@@ -53,7 +53,7 @@ Prérequis
 
 Ouvrez un terminal et placez-vous dans le dossier htdocs de votre installation XAMPP (généralement C:\xampp\htdocs). Clonez ensuite le dépôt :
 
-git clone [URL_DE_VOTRE_DEPOT_GITHUB] touche-pas-au-klaxon
+git clone https://github.com/MistSF/touche-pas-au-klaxon.git touche-pas-au-klaxon
 cd touche-pas-au-klaxon
 
 2. Installer les Dépendances
